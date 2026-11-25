@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en-AU"><head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; font-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="airt-id" content="mario-powerup-chart">
+<meta name="airt-version" content="1.0">
+<title>Super Mario power-up cheat sheet (unofficial fan reference)</title>
+<style>
+@page{size:297mm 210mm;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#cfd5e0}
+body{font-family:"Barlow",sans-serif;color:#1d2433;font-size:7.6pt;line-height:1.22;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+h1,h2,h3,.kick,.pg,.chip,.st,.banner,.gt,.lb,th{font-family:"Exo 2",sans-serif}
+.page{position:relative;width:297mm;height:210mm;overflow:hidden;background:#f7f9fd;page-break-after:always;break-after:page;margin:0 auto}
+.page:last-child{page-break-after:auto;break-after:auto}
+@media screen{.page{margin:6mm auto;box-shadow:0 1mm 4mm rgba(0,0,0,.25)}}
+header{position:absolute;left:0;right:0;top:0;height:29mm;background:#3b1f4a;color:#fff;padding:5mm 10mm 0 10mm;display:flex;justify-content:space-between;gap:6mm;overflow:hidden}
+.stripe{position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 3mm,transparent 3mm 6mm);pointer-events:none}
+.htext{position:relative;z-index:2;flex:1;min-width:0}
+.kick{font-size:6.4pt;letter-spacing:.28em;text-transform:uppercase;color:#ffd166;font-weight:700}
+h1{font-size:18pt;margin:.8mm 0 .6mm;font-weight:800;letter-spacing:.02em;line-height:1.05}
+.lede{margin:0;font-size:7.8pt;color:#eadff0}
+.keys{position:relative;z-index:2;background:rgba(255,255,255,.96);color:#1d2433;border-radius:1.6mm;padding:1.6mm 2.6mm;align-self:flex-start;font-size:6.8pt;width:112mm;flex:none;display:grid;grid-template-columns:1fr 1fr 1fr;gap:1mm 3mm}
+.keys b{grid-column:1/-1;font-family:"Exo 2",sans-serif;font-size:7pt}
+.keys span{display:flex;align-items:center;gap:1.2mm;white-space:nowrap}
+.k{display:inline-block;width:4mm;height:4mm;border-radius:.6mm;flex:none;border:.2mm solid rgba(0,0,0,.25)}
+.k.big{width:6mm;height:6mm;border-radius:1mm}
+/* page 1 table */
+.p1{position:absolute;left:10mm;right:10mm;top:33mm;bottom:15mm;display:grid;grid-template-columns:196mm 1fr;gap:5mm}
+.tb{border-collapse:collapse;table-layout:fixed;width:196mm;align-self:start}
+.tb th{background:#3b1f4a;color:#fff;font-size:7pt;font-weight:700;text-align:left;padding:1mm 1.6mm;height:6mm}
+.tb th small{font-weight:400;color:#eadff0}
+.tb th.gc,.tb td.gc{width:3mm;padding:0}
+.tb th:nth-child(2){width:46mm}.tb th:nth-child(3){width:72mm}
+.tb td{border-bottom:.25mm solid #cdd5e3;padding:.5mm 1.6mm;height:8.1mm;vertical-align:middle;background:#fff}
+.tb tr:nth-child(odd) td:not(.gc){background:#f2f5fa}
+.nm b{display:block;font-size:8.2pt;line-height:1.1}.nm small{display:block;font-size:6.6pt;color:#5d667a;line-height:1.1}
+.ln{font-size:8pt;line-height:1.15}.fd{font-size:7pt;line-height:1.12;color:#3a4256}
+.side1{display:flex;flex-direction:column;gap:3mm;min-width:0}
+.box{background:#fff;border:.25mm solid #cdd5e3;border-radius:1.8mm;padding:2.4mm 3mm}
+.box h3{margin:0 0 1.2mm;font-size:10pt;color:#3b1f4a}
+.box p{margin:0;font-size:8.3pt;line-height:1.3}.box ul{margin:.8mm 0 0;padding-left:3.6mm;font-size:8.3pt;line-height:1.35}
+.kl{display:flex;align-items:center;gap:2.2mm;margin:1.2mm 0;font-size:7.8pt;line-height:1.2}
+.banner{background:#ffd166;color:#3b1f4a;font-weight:700;font-size:7.4pt;padding:1.6mm 2.6mm;border-radius:1.4mm;letter-spacing:.02em}
+/* cards */
+.grid{position:absolute;left:10mm;right:10mm;top:33mm;bottom:15mm;display:grid;gap:3mm}
+.g9{grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr)}
+.card{position:relative;background:#fff;border:.3mm solid #cdd5e3;border-radius:2mm;overflow:hidden;box-shadow:0 .4mm 1mm rgba(20,33,61,.12);display:flex;flex-direction:column}
+.ctop{padding:.9mm 2.6mm;display:flex;justify-content:space-between;align-items:center;gap:2mm}
+.card h3{margin:0;font-size:12pt;font-weight:800;line-height:1.1;letter-spacing:.02em;white-space:nowrap}
+.gt{font-size:6.2pt;letter-spacing:.12em;text-transform:uppercase;font-weight:700;background:rgba(255,255,255,.85);color:#1d2433;padding:.3mm 1.2mm;border-radius:.6mm;white-space:nowrap}
+.cb{padding:1.2mm 2.8mm 1.4mm;display:flex;flex-direction:column;flex:1;gap:1.1mm}
+.gn{font-size:8.2pt;color:#5d667a}.gn b{color:#1d2433}
+.sec{display:flex;flex-direction:column;gap:.3mm}
+.st{font-size:6.6pt;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#5d667a}
+.sec ul{margin:0;padding-left:3.8mm;font-size:9.2pt;line-height:1.25}
+.rw{display:grid;grid-template-columns:21mm 1fr;align-items:start;gap:1mm}
+.lb{font-size:6.6pt;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:#5d667a;line-height:4mm}
+.tx{font-size:8.8pt;line-height:1.22}
+.tip{margin-top:auto;font-size:8.6pt;color:#3a4256;border-top:.2mm dashed #cdd5e3;padding-top:.8mm;line-height:1.2}
+.foot{position:absolute;left:10mm;right:10mm;bottom:5.5mm;height:6mm;display:flex;justify-content:space-between;align-items:center;gap:4mm;font-size:6.1pt;color:#4a5368;border-top:.25mm solid #9aa6bf;padding-top:.8mm}
+.foot .pg{letter-spacing:.2em;font-weight:700;color:#3b1f4a;white-space:nowrap}
+/* notes */
+.nwrap{position:absolute;left:10mm;right:10mm;top:33mm;bottom:15mm;display:grid;grid-template-columns:1fr 88mm;gap:5mm}
+.notes{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:min-content;gap:3.4mm 4mm;align-content:start}
+.note{background:#fff;border:.25mm solid #cdd5e3;border-radius:1.8mm;padding:2.6mm 3mm}
+.note h3{margin:0 0 1.2mm;font-size:10pt;color:#3b1f4a;display:flex;align-items:center;gap:1.4mm}
+.nn{display:inline-flex;align-items:center;justify-content:center;width:4.2mm;height:4.2mm;border-radius:50%;background:#3b1f4a;color:#ffd166;font-size:6.4pt;flex:none}
+.note p{margin:0;font-size:8.7pt;line-height:1.3}
+.side{display:flex;flex-direction:column;gap:3.4mm}
+.box.warn{background:#fff6dc;border-color:#e8c46a}
+</style></head><body>
+<section class="page">
+<header><div class="stripe"></div>
+<div class="htext"><div class="kick">Unofficial fan reference &middot; Super Mario power-up cheat sheet</div>
+<h1>Power-ups at a glance</h1><p class="lede">18 well-known power-ups from the Super Mario games, from the classics to the newest, sorted into five colour groups.</p></div>
+<div class="keys"><b>Colour key</b><span><i class="k" style="background:#2f9e44"></i>Size</span>
+<span><i class="k" style="background:#f2b705"></i>Protection and lives</span>
+<span><i class="k" style="background:#e8590c"></i>Throwing</span>
+<span><i class="k" style="background:#1c7ed6"></i>Flying</span>
+<span><i class="k" style="background:#7048e8"></i>Special moves</span>
+</div>
+</header>
+<div class="p1"><table class="tb"><tr><th class="gc"></th><th>Power-up <small>(name in the games)</small></th><th>What it does</th><th>Where you&rsquo;ll find it</th></tr>
+<tr data-name="Grow-big mushroom"><td class="gc" style="background:#2f9e44"></td><td class="nm"><b>Grow-big mushroom</b><small>Super Mushroom</small></td><td class="ln">Makes you big, so you can take one extra hit</td><td class="fd">Nearly every Super Mario game since Super Mario Bros. (1985)</td></tr>
+<tr data-name="Tiny mushroom"><td class="gc" style="background:#2f9e44"></td><td class="nm"><b>Tiny mushroom</b><small>Mini Mushroom</small></td><td class="ln">Shrinks you to tiny size for tiny pipes and gaps</td><td class="fd">The New Super Mario Bros. games</td></tr>
+<tr data-name="Giant mushroom"><td class="gc" style="background:#2f9e44"></td><td class="nm"><b>Giant mushroom</b><small>Mega Mushroom</small></td><td class="ln">Makes you huge for a short time; smash everything</td><td class="fd">New Super Mario Bros. (Nintendo DS)</td></tr>
+<tr data-name="Invincibility star"><td class="gc" style="background:#f2b705"></td><td class="nm"><b>Invincibility star</b><small>Super Star</small></td><td class="ln">Nothing can hurt you for a short time</td><td class="fd">Nearly every Super Mario game since Super Mario Bros. (1985)</td></tr>
+<tr data-name="Extra-life mushroom"><td class="gc" style="background:#f2b705"></td><td class="nm"><b>Extra-life mushroom</b><small>1-Up Mushroom</small></td><td class="ln">Gives you one extra life</td><td class="fd">Nearly every Super Mario game since Super Mario Bros. (1985)</td></tr>
+<tr data-name="Fireball flower"><td class="gc" style="background:#e8590c"></td><td class="nm"><b>Fireball flower</b><small>Fire Flower</small></td><td class="ln">Throw bouncing fireballs that beat most enemies</td><td class="fd">Nearly every Super Mario game since Super Mario Bros. (1985)</td></tr>
+<tr data-name="Freeze flower"><td class="gc" style="background:#e8590c"></td><td class="nm"><b>Freeze flower</b><small>Ice Flower</small></td><td class="ln">Throw ice balls that freeze enemies into blocks</td><td class="fd">New Super Mario Bros. Wii and New Super Mario Bros. U</td></tr>
+<tr data-name="Hammer-throw suit"><td class="gc" style="background:#e8590c"></td><td class="nm"><b>Hammer-throw suit</b><small>Hammer Suit</small></td><td class="ln">Throw hammers in an arc; duck to block fire</td><td class="fd">Super Mario Bros. 3</td></tr>
+<tr data-name="Boomerang flower"><td class="gc" style="background:#e8590c"></td><td class="nm"><b>Boomerang flower</b><small>Boomerang Flower</small></td><td class="ln">Throw a boomerang that comes back to you</td><td class="fd">Super Mario 3D Land and Super Mario 3D World</td></tr>
+<tr data-name="Raccoon-tail leaf"><td class="gc" style="background:#1c7ed6"></td><td class="nm"><b>Raccoon-tail leaf</b><small>Super Leaf</small></td><td class="ln">Gives you a tail: spin to hit, run to fly</td><td class="fd">Super Mario Bros. 3 (later 3D games use a leaf for a similar tail)</td></tr>
+<tr data-name="Statue suit"><td class="gc" style="background:#1c7ed6"></td><td class="nm"><b>Statue suit</b><small>Tanooki Suit</small></td><td class="ln">Tail powers, plus turn into a statue</td><td class="fd">Super Mario Bros. 3</td></tr>
+<tr data-name="Flying cape feather"><td class="gc" style="background:#1c7ed6"></td><td class="nm"><b>Flying cape feather</b><small>Cape Feather</small></td><td class="ln">Wear a cape to glide, fly and spin</td><td class="fd">Super Mario World</td></tr>
+<tr data-name="Propeller mushroom"><td class="gc" style="background:#1c7ed6"></td><td class="nm"><b>Propeller mushroom</b><small>Propeller Mushroom</small></td><td class="ln">Spin high into the air, then drift down</td><td class="fd">New Super Mario Bros. Wii and New Super Mario Bros. U</td></tr>
+<tr data-name="Gliding acorn"><td class="gc" style="background:#1c7ed6"></td><td class="nm"><b>Gliding acorn</b><small>Super Acorn</small></td><td class="ln">Glide over gaps and cling to walls</td><td class="fd">New Super Mario Bros. U</td></tr>
+<tr data-name="Frog swim suit"><td class="gc" style="background:#7048e8"></td><td class="nm"><b>Frog swim suit</b><small>Frog Suit</small></td><td class="ln">Swim fast and steer easily underwater</td><td class="fd">Super Mario Bros. 3</td></tr>
+<tr data-name="Penguin suit"><td class="gc" style="background:#7048e8"></td><td class="nm"><b>Penguin suit</b><small>Penguin Suit</small></td><td class="ln">Belly-slide, swim well and throw ice balls</td><td class="fd">New Super Mario Bros. Wii and New Super Mario Bros. U</td></tr>
+<tr data-name="Cat bell"><td class="gc" style="background:#7048e8"></td><td class="nm"><b>Cat bell</b><small>Super Bell</small></td><td class="ln">Climb walls, scratch and pounce like a cat</td><td class="fd">Super Mario 3D World</td></tr>
+<tr data-name="Elephant fruit"><td class="gc" style="background:#7048e8"></td><td class="nm"><b>Elephant fruit</b><small>Elephant Fruit</small></td><td class="ln">Turn into an elephant; swing your trunk, spray water</td><td class="fd">Super Mario Bros. Wonder (2023)</td></tr>
+</table>
+<div class="side1">
+ <div class="box"><h3>How to read it</h3><p>Each row is one power-up. The <b>coloured strip</b> on the left shows its group. The bold name is a plain description; the small name under it is what the games call it.</p></div>
+
+ <div class="box"><h3>Colour key</h3><div class="kl"><i class="k big" style="background:#2f9e44"></i><div><b>Size</b> (3)<br>Makes you bigger, tiny or giant</div>
+</div>
+<div class="kl"><i class="k big" style="background:#f2b705"></i><div><b>Protection and lives</b> (2)<br>Keeps you safe or gives an extra life</div>
+</div>
+<div class="kl"><i class="k big" style="background:#e8590c"></i><div><b>Throwing</b> (4)<br>Lets you throw things at enemies</div>
+</div>
+<div class="kl"><i class="k big" style="background:#1c7ed6"></i><div><b>Flying</b> (5)<br>Helps you fly, glide or float</div>
+</div>
+<div class="kl"><i class="k big" style="background:#7048e8"></i><div><b>Special moves</b> (4)<br>Swim, slide, climb or smash in new ways</div>
+</div>
+</div>
+
+ <div class="box"><h3>Got hit?</h3><p>A hit usually takes your power away and makes you smaller. Small with no power-up? One more hit costs a life. Pages 2 and 3 say what happens for each power-up.</p></div>
+
+ <div class="banner">UNOFFICIAL FAN REFERENCE &middot; our own words and layout &middot; no official art, logos or fonts</div>
+
+</div>
+</div>
+<div class="foot"><span>Super Mario power-up cheat sheet &middot; <b>Unofficial fan reference</b>, written in our own words. Not affiliated with or endorsed by Nintendo.</span>
+<span>Made by AiRT Official &middot; github.com/airt-gallery</span>
+<span class="pg">PAGE 1 OF 4</span>
+</div>
+</section>
+<section class="page">
+<header><div class="stripe"></div>
+<div class="htext"><div class="kick">Unofficial fan reference &middot; Super Mario power-up cheat sheet</div>
+<h1>Size, protection and throwing</h1><p class="lede">One card per power-up: what it does, what happens if you get hit, where to find it, and one handy tip.</p></div>
+<div class="keys"><b>Colour key</b><span><i class="k" style="background:#2f9e44"></i>Size</span>
+<span><i class="k" style="background:#f2b705"></i>Protection and lives</span>
+<span><i class="k" style="background:#e8590c"></i>Throwing</span>
+<span><i class="k" style="background:#1c7ed6"></i>Flying</span>
+<span><i class="k" style="background:#7048e8"></i>Special moves</span>
+</div>
+</header>
+<div class="grid g9"><div class="card" data-name="Grow-big mushroom"><div class="ctop" style="background:#2f9e44;color:#fff"><h3>Grow-big mushroom</h3><span class="gt">Size</span>
+</div>
+<div class="cb"><div class="gn">In the games: <b>Super Mushroom</b></div>
+<div class="sec"><div class="st">What it does</div>
+<ul><li>Turns small you into big you.</li>
+<li>Big enough to smash brick blocks from below.</li>
+</ul>
+</div>
+<div class="rw"><span class="lb">If you get hit</span>
+<span class="tx">You shrink back to small.</span>
+</div>
+<div class="rw"><span class="lb">Find it in</span>
+<span class="tx">Nearly every Super Mario game since Super Mario Bros. (1985)</span>
+</div>
+<div class="tip"><b>Tip:</b> Small with no power-up? One hit costs a life, so grab this first.</div>
+</div>
+</div>
+<div class="card" data-name="Tiny mushroom"><div class="ctop" style="background:#2f9e44;color:#fff"><h3>Tiny mushroom</h3><span class="gt">Size</span>
+</div>
+<div class="cb"><div class="gn">In the games: <b>Mini Mushroom</b></div>
+<div class="sec"><div class="st">What it does</div>
+<ul><li>Fit through tiny pipes and narrow gaps.</li>
+<li>Jump higher, float down and run across water.</li>
+</ul>
+</div>
+<div class="rw"><span class="lb">If you get hit</span>
+<span class="tx">One hit and you lose a life.</span>
+</div>
+<div class="rw"><span class="lb">Find it in</span>
+<span class="tx">The New Super Mario Bros. games</span>
+</div>
+<div class="tip"><b>Tip:</b> A normal stomp won&#x27;t beat most enemies. Use a ground-pound instead.</div>
+</div>
+</div>
+<div class="card" data-name="Giant mushroom"><div class="ctop" style="background:#2f9e44;color:#fff"><h3>Giant mushroom</h3><span class="gt">Size</span>
+</div>
+<div class="cb"><div class="gn">In the games: <b>Mega Mushroom</b></div>
+<div class="sec"><div class="st">What it does</div>
+<ul><li>Grow giant for a few seconds.</li>
+<li>Walk through enemies, blocks and even pipes.</li>
+</ul>
+</div>
+<div class="rw"><span class="lb">If you get hit</span>
+<span class="tx">Enemies can&#x27;t hurt you while you&#x27;re giant, but pits still can.</span>
+</div>
+<div class="rw"><span class="lb">Find it in</span>
+<span class="tx">New Super Mario Bros. (Nintendo DS)</span>
+</div>
+<div class="tip"><b>Tip:</b> Smash as much as you can before it wears off. It can earn extra lives.</div>
+</div>
+</div>
+<div class="card" data-name="Invincibility star"><div class="ctop" style="background:#f2b705;color:#1b1b1b"><h3>Invincibility star</h3><span class="gt">Protection and lives</span>
+</div>
+<div class="cb"><div class="gn">In the games: <b>Super Star</b></div>
+<div class="sec"><div class="st">What it does</div>
+<ul><li>You flash and special music plays.</li>
+<li>Run into enemies to knock them out.</li>
+</ul>
+</div>
+<div class="rw"><span class="lb">If you get hit</span>
+<span class="tx">Enemies can&#x27;t hurt you while it lasts, but pits still can.</span>
+</div>
+<div class="rw"><span class="lb">Find it in</span>
+<span class="tx">Nearly every Super Mario game since Super Mario Bros. (1985)</span>
+</div>
+<div class="tip"><b>Tip:</b> It only lasts a few seconds, so keep running and don&#x27;t stop.</div>
+</div>
+</div>
+<div class="card" data-name="Extra-life mushroom"><div class="ctop" style="background:#f2b705;color:#1b1b1b"><h3>Extra-life mushroom</h3><span class="gt">Protection and lives</span>
+</div>
+<div class="cb"><div class="gn">In the games: <b>1-Up Mushroom</b></div>
+<div class="sec"><div class="st">What it does</div>
+<ul><li>Adds one life to your total.</li>
+<li>It moves, so chase it before it falls off the screen.</li>
+</ul>
+</div>
+<div class="rw"><span class="lb">If you get hit</span>
+<span class="tx">Nothing to lose: the extra life is yours to keep.</span>
+</div>
+<div class="rw"><span class="lb">Find it in</span>
+<span class="tx">Nearly every Super Mario game since Super Mario Bros. (1985)</span>
+</div>
+<div class="tip"><b>Tip:</b> In most games, collecting 100 coins gives you an extra life too.</div>
+</div>
+</div>
+<div class="card" data-name="Fireball flower"><div class="ctop" style="background:#e8590c;color:#fff"><h3>Fireball flower</h3><span class="gt">Throwing</span>
+</div>
+<div class="cb"><div class="gn">In the games: <b>Fire Flower</b></div>
+<div class="sec"><div class="st">What it does</div>
+<ul><li>Throw fireballs that bounce along the ground.</li>
+<li>Beats most enemies from a safe distance.</li>
+</ul>
+</div>
+<div class="rw"><span class="lb">If you get hit</span>
+<span class="tx">You lose the power and get smaller.</span>
+</div>
+<div class="rw"><span class="lb">Find it in</span>
+<span class="tx">Nearly every Super Mario game since Super Mario Bros. (1985)</span>
+</div>
+<div class="tip"><b>Tip:</b> Some enemies, like ghosts and skeletons, shrug fireballs off.</div>
+</div>
+</div>
+<div class="card" data-name="Freeze flower"><div class="ctop" style="background:#e8590c;color:#fff"><h3>Freeze flower</h3><span class="gt">Throwing</span>
+</div>
+<div class="cb"><div class="gn">In the games: <b>Ice Flower</b></div>
+<div class="sec"><div class="st">What it does</div>
+<ul><li>Freeze enemies into blocks of ice.</li>
+<li>Stand on a frozen enemy, or pick it up and throw it.</li>
+</ul>
+</div>
+<div class="rw"><span class="lb">If you get hit</span>
+<span class="tx">You lose the power and get smaller.</span>
+</div>
+<div class="rw"><span class="lb">Find it in</span>
+<span class="tx">New Super Mario Bros. Wii and New Super Mario Bros. U</span>
+</div>
+<div class="tip"><b>Tip:</b> Freeze an enemy beside a high ledge and use it as a step.</div>
+</div>
+</div>
+<div class="card" data-name="Hammer-throw suit"><div class="ctop" style="background:#e8590c;color:#fff"><h3>Hammer-throw suit</h3><span class="gt">Throwing</span>
+</div>
+<div class="cb"><div class="gn">In the games: <b>Hammer Suit</b></div>
+<div class="sec"><div class="st">What it does</div>
+<ul><li>Throw hammers in a high arc.</li>
+<li>Beats enemies that fireballs can&#x27;t. Duck to block fire.</li>
+</ul>
+</div>
+<div class="rw"><span class="lb">If you get hit</span>
+<span class="tx">You lose the power and get smaller.</span>
+</div>
+<div class="rw"><span class="lb">Find it in</span>
+<span class="tx">Super Mario Bros. 3</span>
+</div>
+<div class="tip"><b>Tip:</b> It&#x27;s rare, so save it for a tough castle level.</div>
+</div>
+</div>
+<div class="card" data-name="Boomerang flower"><div class="ctop" style="background:#e8590c;color:#fff"><h3>Boomerang flower</h3><span class="gt">Throwing</span>
+</div>
+<div class="cb"><div class="gn">In the games: <b>Boomerang Flower</b></div>
+<div class="sec"><div class="st">What it does</div>
+<ul><li>The boomerang flies out, then comes back to you.</li>
+<li>It can grab coins and items on the way.</li>
+</ul>
+</div>
+<div class="rw"><span class="lb">If you get hit</span>
+<span class="tx">You lose the power and get smaller.</span>
+</div>
+<div class="rw"><span class="lb">Find it in</span>
+<span class="tx">Super Mario 3D Land and Super Mario 3D World</span>
+</div>
+<div class="tip"><b>Tip:</b> Throw it at coins you can&#x27;t reach, then let it bring them back.</div>
+</div>
+</div>
+</div>
+<div class="foot"><span>Super Mario power-up cheat sheet &middot; <b>Unofficial fan reference</b>, written in our own words. Not affiliated with or endorsed by Nintendo.</span>
+<span>Made by AiRT Official &middot; github.com/airt-gallery</span>
+<span class="pg">PAGE 2 OF 4</span>
+</div>
+</section>
+<section class="page">
+<header><div class="stripe"></div>
+<div class="htext"><div class="kick">Unofficial fan reference &middot; Super Mario power-up cheat sheet</div>
+<h1>Flying and special moves</h1><p class="lede">One card per power-up: what it does, what happens if you get hit, where to find it, and one handy tip.</p></div>
+<div class="keys"><b>Colour key</b><span><i class="k" style="background:#2f9e44"></i>Size</span>
+<span><i class="k" style="background:#f2b705"></i>Protection and lives</span>
+<span><i class="k" style="background:#e8590c"></i>Throwing</span>
+<span><i class="k" style="background:#1c7ed6"></i>Flying</span>
+<span><i class="k" style="background:#7048e8"></i>Special moves</span>
+</div>
+</header>
+<div class="grid g9"><div class="card" data-name="Raccoon-tail leaf"><div class="ctop" style="background:#1c7ed6;color:#fff"><h3>Raccoon-tail leaf</h3><span class="gt">Flying</span>
+</div>
+<div class="cb"><div class="gn">In the games: <b>Super Leaf</b></div>
+<div class="sec"><div class="st">What it does</div>
+<ul><li>Spin your tail to hit enemies and blocks.</li>
+<li>Run fast, then jump to fly for a short time.</li>
+</ul>
+</div>
+<div class="rw"><span class="lb">If you get hit</span>
+<span class="tx">You lose the power and get smaller.</span>
+</div>
+<div class="rw"><span class="lb">Find it in</span>
+<span class="tx">Super Mario Bros. 3 (later 3D games use a leaf for a similar tail)</span>
+</div>
+<div class="tip"><b>Tip:</b> Falling? Keep pressing jump and the tail slows you down.</div>
+</div>
+</div>
+<div class="card" data-name="Statue suit"><div class="ctop" style="background:#1c7ed6;color:#fff"><h3>Statue suit</h3><span class="gt">Flying</span>
+</div>
+<div class="cb"><div class="gn">In the games: <b>Tanooki Suit</b></div>
+<div class="sec"><div class="st">What it does</div>
+<ul><li>Does everything the tail leaf does.</li>
+<li>Turn into a stone statue for a moment.</li>
+</ul>
+</div>
+<div class="rw"><span class="lb">If you get hit</span>
+<span class="tx">As a statue, nothing can hurt you. Otherwise you lose the power and get smaller.</span>
+</div>
+<div class="rw"><span class="lb">Find it in</span>
+<span class="tx">Super Mario Bros. 3</span>
+</div>
+<div class="tip"><b>Tip:</b> Turn into a statue when an enemy is about to bump into you.</div>
+</div>
+</div>
+<div class="card" data-name="Flying cape feather"><div class="ctop" style="background:#1c7ed6;color:#fff"><h3>Flying cape feather</h3><span class="gt">Flying</span>
+</div>
+<div class="cb"><div class="gn">In the games: <b>Cape Feather</b></div>
+<div class="sec"><div class="st">What it does</div>
+<ul><li>Get a running start, then take off and glide.</li>
+<li>Spin your cape to knock enemies away.</li>
+</ul>
+</div>
+<div class="rw"><span class="lb">If you get hit</span>
+<span class="tx">You lose the power and go back to small.</span>
+</div>
+<div class="rw"><span class="lb">Find it in</span>
+<span class="tx">Super Mario World</span>
+</div>
+<div class="tip"><b>Tip:</b> While gliding, press back to swoop up and forward to dive.</div>
+</div>
+</div>
+<div class="card" data-name="Propeller mushroom"><div class="ctop" style="background:#1c7ed6;color:#fff"><h3>Propeller mushroom</h3><span class="gt">Flying</span>
+</div>
+<div class="cb"><div class="gn">In the games: <b>Propeller Mushroom</b></div>
+<div class="sec"><div class="st">What it does</div>
+<ul><li>Spin straight up high, then float down slowly.</li>
+<li>Press down while falling to drill downwards.</li>
+</ul>
+</div>
+<div class="rw"><span class="lb">If you get hit</span>
+<span class="tx">You lose the power and get smaller.</span>
+</div>
+<div class="rw"><span class="lb">Find it in</span>
+<span class="tx">New Super Mario Bros. Wii and New Super Mario Bros. U</span>
+</div>
+<div class="tip"><b>Tip:</b> Great for reaching coins and secrets high above the level.</div>
+</div>
+</div>
+<div class="card" data-name="Gliding acorn"><div class="ctop" style="background:#1c7ed6;color:#fff"><h3>Gliding acorn</h3><span class="gt">Flying</span>
+</div>
+<div class="cb"><div class="gn">In the games: <b>Super Acorn</b></div>
+<div class="sec"><div class="st">What it does</div>
+<ul><li>Glide slowly across long gaps.</li>
+<li>Cling to walls for a moment; one extra lift in mid-air.</li>
+</ul>
+</div>
+<div class="rw"><span class="lb">If you get hit</span>
+<span class="tx">You lose the power and get smaller.</span>
+</div>
+<div class="rw"><span class="lb">Find it in</span>
+<span class="tx">New Super Mario Bros. U</span>
+</div>
+<div class="tip"><b>Tip:</b> Save the mid-air lift for the end of a long glide.</div>
+</div>
+</div>
+<div class="card" data-name="Frog swim suit"><div class="ctop" style="background:#7048e8;color:#fff"><h3>Frog swim suit</h3><span class="gt">Special moves</span>
+</div>
+<div class="cb"><div class="gn">In the games: <b>Frog Suit</b></div>
+<div class="sec"><div class="st">What it does</div>
+<ul><li>Swim fast, even against strong currents.</li>
+<li>On land you can only hop.</li>
+</ul>
+</div>
+<div class="rw"><span class="lb">If you get hit</span>
+<span class="tx">You lose the power and get smaller.</span>
+</div>
+<div class="rw"><span class="lb">Find it in</span>
+<span class="tx">Super Mario Bros. 3</span>
+</div>
+<div class="tip"><b>Tip:</b> Brilliant in water levels, awkward everywhere else.</div>
+</div>
+</div>
+<div class="card" data-name="Penguin suit"><div class="ctop" style="background:#7048e8;color:#fff"><h3>Penguin suit</h3><span class="gt">Special moves</span>
+</div>
+<div class="cb"><div class="gn">In the games: <b>Penguin Suit</b></div>
+<div class="sec"><div class="st">What it does</div>
+<ul><li>Belly-slide to knock enemies and break blocks.</li>
+<li>Swim well, grip on ice and throw ice balls.</li>
+</ul>
+</div>
+<div class="rw"><span class="lb">If you get hit</span>
+<span class="tx">You lose the power and get smaller.</span>
+</div>
+<div class="rw"><span class="lb">Find it in</span>
+<span class="tx">New Super Mario Bros. Wii and New Super Mario Bros. U</span>
+</div>
+<div class="tip"><b>Tip:</b> The best choice for icy and snowy levels.</div>
+</div>
+</div>
+<div class="card" data-name="Cat bell"><div class="ctop" style="background:#7048e8;color:#fff"><h3>Cat bell</h3><span class="gt">Special moves</span>
+</div>
+<div class="cb"><div class="gn">In the games: <b>Super Bell</b></div>
+<div class="sec"><div class="st">What it does</div>
+<ul><li>Run straight up walls for a while.</li>
+<li>Scratch enemies, or pounce down from the air.</li>
+</ul>
+</div>
+<div class="rw"><span class="lb">If you get hit</span>
+<span class="tx">You lose the power and get smaller.</span>
+</div>
+<div class="rw"><span class="lb">Find it in</span>
+<span class="tx">Super Mario 3D World</span>
+</div>
+<div class="tip"><b>Tip:</b> Climb up the side of the goal pole to grab it near the top.</div>
+</div>
+</div>
+<div class="card" data-name="Elephant fruit"><div class="ctop" style="background:#7048e8;color:#fff"><h3>Elephant fruit</h3><span class="gt">Special moves</span>
+</div>
+<div class="cb"><div class="gn">In the games: <b>Elephant Fruit</b></div>
+<div class="sec"><div class="st">What it does</div>
+<ul><li>Swing your trunk to knock enemies away and smash blocks.</li>
+<li>Suck up water and spray it.</li>
+</ul>
+</div>
+<div class="rw"><span class="lb">If you get hit</span>
+<span class="tx">You lose the power and get smaller.</span>
+</div>
+<div class="rw"><span class="lb">Find it in</span>
+<span class="tx">Super Mario Bros. Wonder (2023)</span>
+</div>
+<div class="tip"><b>Tip:</b> Spray water on dry flowers along the way.</div>
+</div>
+</div>
+</div>
+<div class="foot"><span>Super Mario power-up cheat sheet &middot; <b>Unofficial fan reference</b>, written in our own words. Not affiliated with or endorsed by Nintendo.</span>
+<span>Made by AiRT Official &middot; github.com/airt-gallery</span>
+<span class="pg">PAGE 3 OF 4</span>
+</div>
+</section>
+<section class="page">
+<header><div class="stripe"></div>
+<div class="htext"><div class="kick">Unofficial fan reference &middot; Super Mario power-up cheat sheet</div>
+<h1>Notes and sources</h1><p class="lede">Short notes that explain how power-ups work, how this sheet was made, and where the facts were checked.</p></div>
+<div class="keys"><b>Colour key</b><span><i class="k" style="background:#2f9e44"></i>Size</span>
+<span><i class="k" style="background:#f2b705"></i>Protection and lives</span>
+<span><i class="k" style="background:#e8590c"></i>Throwing</span>
+<span><i class="k" style="background:#1c7ed6"></i>Flying</span>
+<span><i class="k" style="background:#7048e8"></i>Special moves</span>
+</div>
+</header>
+
+<div class="nwrap"><div class="notes"><div class="note"><h3><span class="nn">1</span>
+Small, big, then powered up</h3><p>Most games have three steps. You start small. A grow-big mushroom makes you big. A flower, leaf, suit or other power-up then gives you a special power on top.</p></div>
+<div class="note"><h3><span class="nn">2</span>
+What a hit does</h3><p>In the very first game and in Super Mario World, a hit with a special power sends you straight back to small. In Super Mario Bros. 3 and the New Super Mario Bros. games, you usually drop to big first.</p></div>
+<div class="note"><h3><span class="nn">3</span>
+A spare in your pocket</h3><p>Super Mario World keeps one spare power-up in a box at the top of the screen. It drops down when you need it. Some later games let you store power-ups too.</p></div>
+<div class="note"><h3><span class="nn">4</span>
+Each game is a bit different</h3><p>The same power-up can work a little differently from game to game. For example, in Super Mario Galaxy the ice power lets you skate across water instead of throwing ice balls.</p></div>
+<div class="note"><h3><span class="nn">5</span>
+Pits still win</h3><p>Even the invincibility star and the giant mushroom can&#x27;t save you from falling into a pit or off the bottom of the screen.</p></div>
+<div class="note"><h3><span class="nn">6</span>
+About the names</h3><p>The bold names on this sheet are plain descriptions we wrote. The small names are what the games call each power-up, so you can find them in a game or a guide.</p></div>
+<div class="note"><h3><span class="nn">7</span>
+Try this at home</h3><p>Invent your own power-up. What does it look like? What does it let you do? Which colour group is it in? And what happens if you get hit?</p></div>
+<div class="note"><h3><span class="nn">8</span>
+Reading the colours</h3><p>Green changes your size. Yellow keeps you safe or adds a life. Orange throws things. Blue helps you fly. Purple gives you special moves.</p></div>
+</div>
+
+<div class="side">
+ <div class="box"><h3>How this cheat sheet was made</h3><p>Built with Ai on AiRT Official from one ASTARR prompt, then checked by hand. Every power-up's effects and games were checked one by one against a trusted fan encyclopedia. All wording is our own: no text from the games or guides, and no official character art, sprites, logos or fonts.</p></div>
+
+ <div class="box"><h3>Sources (checked 26 Nov 2026)</h3><ul><li>Super Mario Wiki, the community Mario encyclopedia: the page for each power-up item</li>
+<li>Super Mario Wiki: the page for each power-up form (what it lets you do)</li>
+</ul>
+</div>
+
+ <div class="box warn"><h3>Unofficial fan reference</h3><p>Super Mario and all related names are trademarks of Nintendo. This cheat sheet is a free, unofficial fan reference made for fun and learning. It is not affiliated with, sponsored by or endorsed by Nintendo.</p></div>
+
+ <div class="box"><h3>Print tips</h3><p>Print in colour on A4, landscape, at 100% (actual size). Page 1 makes a good sheet to keep beside the game.</p></div>
+
+</div>
+</div>
+<div class="foot"><span>Super Mario power-up cheat sheet &middot; <b>Unofficial fan reference</b>, written in our own words. Not affiliated with or endorsed by Nintendo.</span>
+<span>Made by AiRT Official &middot; github.com/airt-gallery</span>
+<span class="pg">PAGE 4 OF 4</span>
+</div>
+</section>
+
+<script>
+(function(){var MM=96/25.4,bad=[];
+function R(el,pg){var a=el.getBoundingClientRect(),b=pg.getBoundingClientRect();return{l:a.left-b.left,t:a.top-b.top,r:a.right-b.left,b:a.bottom-b.top};}
+document.querySelectorAll(".page").forEach(function(pg,i){var W=pg.clientWidth,H=pg.clientHeight,fb=R(pg.querySelector(".foot"),pg).t;
+ var els=pg.querySelectorAll(".card,.note,.box,table,.banner,.side1,.p1,header .keys,.htext");
+ els.forEach(function(el){var r=R(el,pg);if(r.b>fb-0.5||r.r>W-9*MM||r.l<9*MM-1||r.t<0)if(!el.matches("header .keys,.htext")||r.b>29*MM||r.r>W-9*MM)bad.push("page "+(i+1)+": "+el.className+" out of bounds "+Math.round(r.l)+","+Math.round(r.t)+"-"+Math.round(r.r)+","+Math.round(r.b)+" foot "+Math.round(fb));});
+ pg.querySelectorAll(".card,.note,.box,.side1,.htext,header .keys,.ctop,.cb,.tx,.tb td,.foot span").forEach(function(el){if(el.scrollHeight>el.clientHeight+1||el.scrollWidth>el.clientWidth+1)bad.push("page "+(i+1)+": clipped "+el.className+" ("+el.textContent.slice(0,30)+") "+el.scrollHeight+">"+el.clientHeight+" / "+el.scrollWidth+">"+el.clientWidth);});
+ pg.querySelectorAll(".card").forEach(function(c){var last=c.querySelector(".cb").lastElementChild,cr=R(c,pg),lr=R(last,pg);if(lr.b>cr.b-1)bad.push("page "+(i+1)+": card content touches bottom "+c.textContent.slice(0,25));
+   var h=c.querySelector("h3"),g=c.querySelector(".gt"),hr=R(h,pg),gr=R(g,pg);if(hr.r>gr.l-1)bad.push("page "+(i+1)+": card title runs into group tag "+h.textContent);});
+ pg.querySelectorAll(".tb td").forEach(function(td){var r=R(td,pg);if(r.b-r.t>8.6*MM)bad.push("page "+(i+1)+": table row too tall "+td.textContent.slice(0,30));});
+ var cs=[].slice.call(pg.querySelectorAll(".card,.note,.box,.tb,.banner"));
+ for(var a=0;a<cs.length;a++)for(var b=a+1;b<cs.length;b++){var p=R(cs[a],pg),q=R(cs[b],pg);if(p.l<q.r-1&&q.l<p.r-1&&p.t<q.b-1&&q.t<p.b-1&&!cs[a].contains(cs[b])&&!cs[b].contains(cs[a]))bad.push("page "+(i+1)+": overlap "+cs[a].className+" / "+cs[b].className);}
+ var keys=pg.querySelector("header .keys"),ht=pg.querySelector(".htext");if(keys&&ht){var k=R(keys,pg),h=R(ht,pg);if(h.r>k.l-1)bad.push("page "+(i+1)+": title runs into key");}
+});
+window.ROWS=[].slice.call(document.querySelectorAll(".tb tr[data-name]")).map(function(tr){return tr.dataset.name;});
+window.CARDS=[].slice.call(document.querySelectorAll(".card")).map(function(c){return c.dataset.name;});
+window.LAYOUT_PROBLEMS=bad;window.PAGE_COUNT=document.querySelectorAll(".page").length;})();
+</script>
+</body></html>
